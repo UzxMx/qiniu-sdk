@@ -87,7 +87,7 @@ module Qiniu
         #
         # spec test
         #
-        def fetch(fetch_url, bucket, key)
+        def fetch(bucket, fetch_url, key)
           url = Config.settings[:fetch_host] + '/fetch/' + urlsafe_base64_encode(fetch_url) + "/to/" + encode_entry_uri(bucket, key)
           return HTTP.management_post(url)
         end # fetch
