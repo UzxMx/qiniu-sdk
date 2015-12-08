@@ -119,7 +119,7 @@ module Qiniu
       end
 
       def fetch(bucket, fetch_url, key)
-        code, data = Storage.fetch(fetch_url, bucket, key)
+        code, data = Storage.fetch(bucket, fetch_url, key)
         code == StatusOK ? data : false
       end
 
